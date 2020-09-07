@@ -203,6 +203,22 @@ nav {
 }
 
 @media screen and (max-width: 903px) {
+  .hero {
+    width: 100%;
+  }
+
+  .hero-introduction p {
+    padding: 5rem 3rem;
+  }
+
+  .hero-introduction a {
+    padding: 0.7rem 4rem;
+    border: 2px solid black;
+    margin-bottom: 3rem;
+  }
+
+  /* Burger Thing */
+
   .burger {
     position: relative;
     display: block;
