@@ -17,16 +17,16 @@
     <header class="main-head">
       <nav>
         <h1 id="logo">Elena Joy</h1>
-        <input type="checkbox" class="menu-check" />
+        <!-- <input type="checkbox" class="menu-check" /> -->
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
+          <li><a href="#gallary">Gallary</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="burger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
         </div>
       </nav>
     </header>
@@ -56,7 +56,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <div class="about-image">
           <h5>MINIMAL</h5>
           <img src="./img/about-image.png" alt="" />
@@ -90,7 +90,7 @@
         </div>
       </section>
 
-      <div class="gallary">
+      <div class="gallary" id="gallary">
         <header class="gallary-head">
           <h2>Quality Photography</h2>
           <p>My work pictures that I took</p>
@@ -100,6 +100,43 @@
         <img class="gallary3" src="./img/gallery-3.jpg" alt="lady in t-shirt" />
         <img class="gallary4" src="./img/gallery-4.jpg" alt="lady in jacket" />
       </div>
+
+      <section class="contact" id="contact">
+        <div class="form-wrapper flex">
+          <h2>Get in <br /><span>touch</span></h2>
+          <form action="">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" required />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div>
+          <img src="./img/contact-image.jpg" alt="elena-joy" />
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <h4>Elena Joy &copy; 2020</h4>
+      <ul>
+        <li>
+          <a href=""
+            ><img src="./img/youtube-symbol 1.svg" alt="youtube-social-media"
+          /></a>
+        </li>
+        <li>
+          <a href=""
+            ><img src="./img/twitter 1.svg" alt="twitter-social-media"
+          /></a>
+        </li>
+        <li>
+          <a href=""
+            ><img src="./img/instagram 1.svg" alt="instagram-social-media"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="./app.js"></script>
   </body>
 </html>

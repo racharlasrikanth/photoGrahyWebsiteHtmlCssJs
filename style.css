@@ -28,10 +28,11 @@ html {
   --header3: calc(3rem + 1vw);
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.5rem + 1vw);
-  --big: calc(2.4rem + 1vw);
+  --big: calc(6rem + 1vw);
   --special-color: #906272;
   --background-color: #414141;
   --gray-text: #525252;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -287,6 +288,75 @@ nav {
   text-align: center;
 }
 
+/* Contact Section */
+
+.contact {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-wrapper {
+  flex: 3 1 40rem;
+}
+
+.form-wrapper h2 {
+  margin: 5rem 0rem;
+}
+
+.form-wrapper label {
+  display: block;
+}
+
+.form-wrapper input {
+  display: block;
+  margin: 3rem 0rem;
+  background: var(--background-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+}
+
+.form-wrapper button {
+  padding: 1rem 7rem;
+  border: none;
+  background: var(--special-color);
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+
+.form-wrapper span {
+  font-size: var(--big);
+  color: var(--special-color);
+}
+.contact img {
+  flex: 1 1 40rem;
+}
+
+/* Footer Section */
+
+footer {
+  background: var(--background-color);
+  color: white;
+  display: flex;
+  padding: 3rem 5%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer h4 {
+  flex: 3 1 40rem;
+  font-size: calc(1.4rem + 1vw);
+}
+
+footer ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media screen and (max-width: 903px) {
   .hero {
     width: 100%;
@@ -307,6 +377,7 @@ nav {
   .burger {
     position: relative;
     display: block;
+    cursor: pointer;
   }
   .burger span {
     padding: 0.2rem 2rem;
@@ -331,7 +402,7 @@ nav {
     align-items: center;
     transition: transform 1s ease;
   }
-  .menu-check {
+  /* .menu-check {
     display: block;
     position: absolute;
     top: 50%;
@@ -342,21 +413,23 @@ nav {
     cursor: pointer;
     opacity: 0;
     z-index: 100;
-  }
-  .menu-check:checked + .nav-links {
+  } */
+  .nav-open {
     transform: translate(-100%);
   }
-  .menu-check:checked ~ .burger span {
+
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
     background: white;
   }
-  .menu-check:checked ~ .burger span:nth-child(1) {
-    transform: rotateZ(45deg) translateY(300%);
-  }
-  .menu-check:checked ~ .burger span:nth-child(2) {
+
+  .toggle .line2 {
     opacity: 0;
   }
-  .menu-check:checked ~ .burger span:nth-child(3) {
+
+  .toggle .line3 {
     transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
   }
 
   /* About Section media query */
@@ -370,9 +443,35 @@ nav {
     grid-column: auto;
   }
   .gallary {
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
   .gallary-head {
     display: none;
+  }
+
+  /* Contact MEdtia Query */
+  .contact img {
+    display: none;
+  }
+
+  footer ul {
+    order: 1;
+  }
+
+  footer h4 {
+    order: 2;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  html {
+    --header1: 3rem;
+    --header2: 5.5rem;
+    --header3: 4rem;
+    --header4: 3rem;
+    --text: 3.5rem;
+    --big: 9rem;
   }
 }
