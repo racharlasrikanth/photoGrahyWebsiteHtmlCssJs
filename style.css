@@ -370,7 +370,7 @@ nav {
     grid-column: auto;
   }
   .gallary {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
   .gallary-head {
     display: none;
