@@ -62,7 +62,7 @@ ul {
 }
 a {
   text-decoration: none;
-  color: rgb(41, 39, 39);
+  color: white;
 }
 
 .flex {
@@ -86,8 +86,10 @@ h1 {
 .main-head {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   z-index: 2;
-  position: relative;
-  /* background: #414141; */
+  position: sticky;
+  top: 0%;
+  background: #414141;
+  color: white;
 }
 
 nav {
@@ -144,6 +146,10 @@ nav {
   background: linear-gradient(#dad8dd, #dad1d4);
   position: relative;
   z-index: 1;
+}
+
+#link-gallary-button {
+  color: black;
 }
 
 .hero-elena {
@@ -381,7 +387,7 @@ footer ul {
   }
   .burger span {
     padding: 0.2rem 2rem;
-    background: var(--gray-text);
+    background: white;
     margin: 0.5rem 0rem;
     display: block;
     transition: all 0.5s ease;
